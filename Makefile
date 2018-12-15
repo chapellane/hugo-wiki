@@ -1,5 +1,9 @@
+.PHONY: build
+build: VERSION=local
 build:
-	echo "Doing nothing"
+	hugo
+	tar -czf site-$(VERSION).tgz -C public .
 
+.PHONY: run
 run:
 	hugo server --port 3322
