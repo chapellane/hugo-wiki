@@ -1,9 +1,7 @@
 .PHONY: upload
 upload: VERSION=local
 upload: build
-	ifndef BUCKET
-		$(error BUCKET is not set)
-	endif
+	test $(BUCKET)
 	aws s3 cp site-$(VERSION).tgz s3://$(BUCKET)/
 
 .PHONY: build
