@@ -1,14 +1,8 @@
-.PHONY: upload
-upload: VERSION=local
-upload: build
-	test $(BUCKET)
-	aws s3 cp site-$(VERSION).tgz s3://$(BUCKET)/
-
 .PHONY: build
-build: VERSION=local
 build:
+	test $(FILENAME)
 	hugo
-	tar -czf site-$(VERSION).tgz -C public .
+	tar -czf ${FILENAME} -C public .
 
 .PHONY: run
 run:
