@@ -1,9 +1,0 @@
-baseURL = "http://localhost"
-languageCode = "en-us"
-title = "Sample Wiki"
-theme = "learn"
-pluralizelisttitles = false
-[params]
-  themeVariant = "purple"
-[outputs]
-home = [ "HTML", "RSS", "JSON"]
