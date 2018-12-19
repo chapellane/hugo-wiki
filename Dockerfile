@@ -1,3 +1,3 @@
 FROM nginx
 
-COPY config.toml /usr/share/nginx/html
+COPY build /usr/share/nginx/html
