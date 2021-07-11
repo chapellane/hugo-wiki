@@ -1,3 +1,3 @@
-FROM nginx
+FROM nginx:latest@sha256:353c20f74d9b6aee359f30e8e4f69c3d7eaea2f610681c4a95849a2fd7c497f9
 
 COPY build /usr/share/nginx/html
